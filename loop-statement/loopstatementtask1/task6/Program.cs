@@ -20,7 +20,7 @@ namespace task6
 
             Console.WriteLine($"result {result}");
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
