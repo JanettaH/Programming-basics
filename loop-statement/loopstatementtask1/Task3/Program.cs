@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace task2
+namespace Task3
 {
     class Program
     {
@@ -19,20 +19,30 @@ namespace task2
                 {
                     Console.WriteLine("1");
                 }
-                else if (number < 1)
+                else if (number < 0)
                 {
-                    Console.WriteLine("Mistake");
+                    Console.WriteLine("Määrittelemätön");
                 }
                 else
                 {
                     int result = 0;
+                    int result2 = 0;
 
                     for (int i = 1; i <= number; i++)
                     {
-                        Console.WriteLine("Index {0} : userInput{1} : condition {2}", i, number, i <= number);
-                        result = result + i;
+                        if (i % 2 != 0)
+                        {
+                            Console.WriteLine("Index {0} : userInput{1} : condition {2}", i, number, i < number);
+                            result = result + i;
+                        }
+                        if (i % 2 == 0)
+                        {
+                            Console.WriteLine("Index {0} : userInput{1} : condition {2}", i, number, i < number);
+                            result2 = result2 + i;
+                        }
                     }
                     Console.WriteLine("Result {0}", result);
+                    Console.WriteLine("Result2 {0}", result2);
                 }
             }
             else
